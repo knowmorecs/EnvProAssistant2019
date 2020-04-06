@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/news/news",
+    "pages/home/home",
+    "pages/weixinpay/weixinpay",
+    "pages/cartpay/cartpay",
+    "pages/address/address",
+    "pages/ai/index",
+    "pages/mybuy/mybuy",
+    "pages/news-details/newsdetails",
+    "pages/ai/camera/camera",
+    "pages/ai/search",
+    "pages/ai/filter/filter",
+    "pages/android/qa",
+    "pages/index/index",
+    "pages/sort/sort",
+    "pages/game/game",
+    "pages/result/gan",
+    "pages/result/list",
+    "pages/result/commit",
+    "pages/news/1",
+    "pages/my/my",
+    "pages/home-details/home-details",
+    "pages/cart/cart",
+    "pages/pay/pay",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#11C2EE",
+    "navigationBarTitleText": "环保助手",
+    "navigationBarTextStyle": "white"
+    },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/ai/index",
+        "text": "识别",
+        "iconPath": "images/icon_ai_default.png",
+        "selectedIconPath": "images/icon_ai.png"
+      },
+     
+      {
+        "pagePath": "pages/sort/sort",
+        "text": "分类",
+        "iconPath": "images/icon_sort_default.png",
+        "selectedIconPath": "images/icon_sort.png"
+      },
+
+      {
+        "pagePath": "pages/news/news",
+        "text": "头条",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_active.png"
+      },
+
+      {
+        "pagePath": "pages/game/game",
+        "text": "测验",
+        "iconPath": "images/game.png",
+        "selectedIconPath": "images/game_active.png"
+      },
+
+      {
+        "pagePath": "pages/home/home",
+        "text": "商店",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_active.png"
+      }
+
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

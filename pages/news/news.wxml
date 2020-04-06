@@ -1,0 +1,103 @@
+<view >
+  <swiper class='lunbo' indicator-dots='true' autoplay='true' interval='4000'>
+    <swiper-item> <image src='../../images/a.jpg' bindtap="onNewsTapa"></image> </swiper-item>
+    <swiper-item> <image src='../../images/c.jpg'  bindtap="onNewsTapb"></image></swiper-item>
+    <swiper-item> <image src='../../images/b.jpg'  bindtap="onNewsTapc"></image> </swiper-item>
+  </swiper>
+</view>
+
+
+<view class='news-list-wrapper'>
+  <view wx:for="{{datalist}}" wx:key="item" class='news-item' data-id='{{item._id}}' bindtap='onNewsTap'>
+    <view class='news-info'>
+      <view class='news-title'>{{item.newsname}}</view>
+       <view class='news-source-info'>
+          <view class='news-source'>{{item.newssource}}</view>
+          <view class='news-date'> {{item.newsdate}}</view>
+       </view>
+    </view>
+     <image class='news-image' src='{{item.newsphoto}}' mode='aspectFill'></image>
+  </view>
+</view>
+
+
+<!-- <view class='news-list-wrapper'>
+  <view class='news-item' bindtap='onNewsTap'>
+    <view class='news-info'>
+      <view class='news-title'>南京政策发布</view>
+       <view class='news-source-info'>
+          <view class='news-source'> 南京市政府办公室</view>
+          <view class='news-date'> 2019.10.11</view>
+       </view>
+    </view>
+     <image class='news-image' src='../../images/b.jpg' mode='aspectFill'></image>
+  </view>
+</view> -->
+
+<!-- 
+
+<view class='news-list-wrapper'>
+  <view class='news-item'>
+    <view class='news-info'>
+      <view class='news-title'>上海一男子未垃圾分类被罚200元</view>
+       <view class='news-source-info'>
+          <view class='news-source'> 澎湃新闻</view>
+          <view class='news-date'> 2019.10.09</view>
+       </view>
+    </view>
+     <image class='news-image' src='../../images/c.jpg' mode='aspectFill'></image>
+  </view>
+</view>
+
+<view class='news-list-wrapper'>
+  <view class='news-item'>
+    <view class='news-info'>
+      <view class='news-title'>北京政策发布</view>
+       <view class='news-source-info'>
+          <view class='news-source'> 北京市政府办公室</view>
+          <view class='news-date'> 2019.10.11</view>
+       </view>
+    </view>
+     <image class='news-image' src='../../images/a.jpg' mode='aspectFill'></image>
+  </view>
+</view>
+
+<view class='news-list-wrapper'>
+  <view class='news-item'>
+    <view class='news-info'>
+      <view class='news-title'>小讲堂：垃圾分类小技巧</view>
+       <view class='news-source-info'>
+          <view class='news-source'>新京报</view>
+          <view class='news-date'> 2019.10.12</view>
+       </view>
+    </view>
+     <image class='news-image' src='../../images/b.jpg' mode='aspectFill'></image>
+  </view>
+</view>
+
+<view class='news-list-wrapper'>
+  <view class='news-item'>
+    <view class='news-info'>
+      <view class='news-title'>上海政策发布</view>
+       <view class='news-source-info'>
+          <view class='news-source'> 上海市政府办公室</view>
+          <view class='news-date'> 2019.10.11</view>
+       </view>
+    </view>
+     <image class='news-image' src='../../images/b.jpg' mode='aspectFill'></image>
+  </view>
+</view>
+
+<view class='news-list-wrapper'>
+  <view class='news-item'>
+    <view class='news-info'>
+      <view class='news-title'>上海政策发布</view>
+       <view class='news-source-info'>
+          <view class='news-source'> 上海市政府办公室</view>
+          <view class='news-date'> 2019.10.11</view>
+       </view>
+    </view>
+     <image class='news-image' src='../../images/b.jpg' mode='aspectFill'></image>
+  </view>
+</view> -->
+

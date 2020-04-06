@@ -1,0 +1,12 @@
+<view class='detail-wrapper'>
+<view class='title'>{{newscontent.newsname}}</view>
+<view class="info">
+    <view class='source'>{{newscontent.newssource}}</view>
+    <view class='date'>{{newscontent.newsdate}}</view>
+    <view class='read-count'>阅读 {{newscontent.newsreadcount}}</view>
+ </view>
+  <view class='content' >
+    <image class='content-img' src='{{newscontent.newsimage}}' mode='widthFix'></image>
+    <view class='content-text'> {{newscontent.newscontent}}</view>
+  </view>
+</view>

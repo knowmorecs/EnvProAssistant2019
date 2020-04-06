@@ -1,0 +1,47 @@
+.lunbo{
+  width: 100%;
+}
+.lunbo image{
+  width: 100%;
+}
+.news-list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-item {
+  margin: 30rpx 30rpx 0 30rpx;
+  display: flex;
+  padding-bottom: 30rpx;
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.1);
+}
+.news-info {
+  width: 75%;
+}
+
+.news-title {
+  font-size: 35rpx;
+  lighting-color: 58rpx;
+  font-weight: 500;
+  margin-bottom: 15rpx;
+}
+
+.news-source-info {
+  display: flex;
+  color: rgba(180, 180, 180, 0.9);
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+.news-source {
+  font-weight: bold;
+}
+
+.news-date {
+  margin-left: 10rpx;
+}
+.news-image {
+  height: 150rpx;
+  width: 200rpx;
+  border-radius: 5rpx;
+  margin-left: 15rpx;
+}

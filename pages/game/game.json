@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+      "i-notice-bar": "../../dist/notice-bar/index",
+      "i-progress": "../../dist/progress/index",
+      "i-button": "../../dist/button/index",
+      "i-badge": "../../dist/badge/index",
+      "i-tag": "../../dist/tag/index",
+      "i-panel": "../../dist/panel/index",
+      "i-message": "../../dist/message/index",
+      "i-cell-group": "../../dist/cell-group/index",
+      "i-cell": "../../dist/cell/index"
+  }
+}

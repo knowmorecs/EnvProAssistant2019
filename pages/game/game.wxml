@@ -1,0 +1,63 @@
+<i-notice-bar speed="2000" icon="systemprompt" loop>
+    好玩的功能即将到来,敬请关注
+</i-notice-bar>
+<i-progress percent="{{percent}}" status="active"></i-progress>
+<i-cell-group>
+    <i-cell title="0{{curDataIndex+1}}/10" label="{{val}}是什么垃圾?"></i-cell>
+</i-cell-group>
+
+<i-button bind:click="click" type="success" shape="circle" size="small" data-key="{{key}}" data-val="{{val}}" data-sel="glj" i-class="btn-backgroud">干垃圾</i-button>
+<i-button bind:click="click" type="success" shape="circle" size="small" data-key="{{key}}" data-val="{{val}}" data-sel="slj">湿垃圾</i-button>
+<i-button bind:click="click" type="success" shape="circle" size="small" data-key="{{key}}" data-val="{{val}}" data-sel="khslj">可回收垃圾</i-button>
+<i-button bind:click="click" type="success" shape="circle" size="small" data-key="{{key}}" data-val="{{val}}" data-sel="yhlj">有害垃圾</i-button>
+<!-- modal -->
+<view class='modal' wx:if="{{SHOW_MODAL}}">
+    <i-panel title="答题完毕">
+        <view style="padding: 0px;">获得[{{rightNum*10}}]分,答对[{{rightNum}}]道,答错[{{errorNum}}]道</view>
+    </i-panel>
+    <view class="table">
+        <view class="tr bg-w">
+            <view class="th">
+                <i-tag class="i-tags" name="标签一" type="border" color="green">
+                    题目
+                </i-tag>
+            </view>
+            <view class="th">
+                <i-tag class="i-tags" name="标签一" type="border" color="green">
+                    你的答案
+                </i-tag>
+            </view>
+            <view class="th ">
+                <i-tag class="i-tags" name="标签一" type="border" color="green">
+                    正确答案
+                </i-tag>
+            </view>
+        </view>
+        <block wx:for="{{result}}">
+            <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+                <view class="td">{{item.val}}</view>
+                <block wx:if="{{item.sel == item.key}}">
+                    <view class="td">{{item.sel=='glj'?'干垃圾':item.sel=='slj'?'湿垃圾':item.sel=='khslj'?'可回收垃圾':'有害垃圾'}}</view>
+                    <view class="td">{{item.key=='glj'?'干垃圾':item.key=='slj'?'湿垃圾':item.key=='khslj'?'可回收垃圾':'有害垃圾'}}</view>
+                </block>
+                <block wx:else>
+                    <view class="td" style='text-decoration:line-through;'>{{item.sel=='glj'?'干垃圾':item.sel=='slj'?'湿垃圾':item.sel=='khslj'?'可回收垃圾':'有害垃圾'}}</view>
+                    <view class="td">{{item.key=='glj'?'干垃圾':item.key=='slj'?'湿垃圾':item.key=='khslj'?'可回收垃圾':'有害垃圾'}}</view>
+                </block>
+            </view>
+            <view class="tr" wx:else>
+                <view class="td">{{item.val}}</view>
+                <block wx:if="{{item.sel == item.key}}">
+                    <view class="td">{{item.sel=='glj'?'干垃圾':item.sel=='slj'?'湿垃圾':item.sel=='khslj'?'可回收垃圾':'有害垃圾'}}</view>
+                    <view class="td">{{item.key=='glj'?'干垃圾':item.key=='slj'?'湿垃圾':item.key=='khslj'?'可回收垃圾':'有害垃圾'}}</view>
+                </block>
+                <block wx:else>
+                    <view class="td" style='text-decoration:line-through;'>{{item.sel=='glj'?'干垃圾':item.sel=='slj'?'湿垃圾':item.sel=='khslj'?'可回收垃圾':'有害垃圾'}}</view>
+                    <view class="td">{{item.key=='glj'?'干垃圾':item.key=='slj'?'湿垃圾':item.key=='khslj'?'可回收垃圾':'有害垃圾'}}</view>
+                </block>
+            </view>
+        </block>
+    </view>
+    <i-button bind:click="playAgain" type="success" shape="circle" size="small">重玩一次</i-button>
+    <i-button open-type="share" type="success" shape="circle" size="small">考考别人</i-button>
+</view>
